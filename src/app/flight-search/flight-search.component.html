@@ -1,0 +1,66 @@
+<mat-card>
+  <mat-card-title>Search for Flights</mat-card-title>
+  <mat-card-content>
+
+    <mat-form-field>
+      <input
+        matInput
+        [(ngModel)]="from"
+        name="from"
+        placeholder="from">
+    </mat-form-field>
+
+    <br>
+
+    <mat-form-field>
+      <input
+        matInput
+        [(ngModel)]="to"
+        name="to"
+        placeholder="to">
+    </mat-form-field>
+
+  </mat-card-content>
+  <mat-card-actions>
+    <button
+      mat-raised-button
+      (click)="search()"
+      color="primary">
+      Search</button>
+  </mat-card-actions>
+</mat-card>
+
+<mat-card *ngIf="flights.length">
+
+  <table class="table table-contensed">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>From</th>
+        <th>To</th>
+        <th>Date</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tr
+      *ngFor="let flight of flights"
+      [class.active]="flight === selectedFlight">
+      <td>{{ flight.id }}</td>
+      <td>{{ flight.from }}</td>
+      <td>{{ flight.to }}</td>
+      <td>{{ flight.date }}</td>
+      <td>
+        <a
+          (click)="select(flight)">
+          select</a>
+      </td>
+    </tr>
+  </table>
+
+</mat-card>
+
+<mat-card *ngIf="selectedFlight">
+  <pre>{{
+    selectedFlight | json
+  }}</pre>
+</mat-card>
