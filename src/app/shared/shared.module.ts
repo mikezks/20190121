@@ -12,9 +12,12 @@ import {
   MatToolbarModule
 } from '@angular/material';
 import { FormsModule } from '@angular/forms';
+import { CityPipe } from './pipes/city.pipe';
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    CityPipe
+  ],
   imports: [
     CommonModule,
     FormsModule,
@@ -29,6 +32,7 @@ import { FormsModule } from '@angular/forms';
     MatToolbarModule
   ],
   exports: [
+    CityPipe,
     FormsModule,
     LayoutModule,
     MatButtonModule,
