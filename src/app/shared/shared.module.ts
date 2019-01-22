@@ -13,10 +13,12 @@ import {
 } from '@angular/material';
 import { FormsModule } from '@angular/forms';
 import { CityPipe } from './pipes/city.pipe';
+import { CityValidatorDirective } from './validators/city-validator.directive';
 
 @NgModule({
   declarations: [
-    CityPipe
+    CityPipe,
+    CityValidatorDirective
   ],
   imports: [
     CommonModule,
@@ -33,6 +35,7 @@ import { CityPipe } from './pipes/city.pipe';
   ],
   exports: [
     CityPipe,
+    CityValidatorDirective,
     FormsModule,
     LayoutModule,
     MatButtonModule,
