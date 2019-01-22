@@ -11,7 +11,7 @@ import {
   MatSnackBarModule,
   MatToolbarModule
 } from '@angular/material';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CityPipe } from './pipes/city.pipe';
 import { CityValidatorDirective } from './validators/city-validator.directive';
 
@@ -23,6 +23,7 @@ import { CityValidatorDirective } from './validators/city-validator.directive';
   imports: [
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     LayoutModule,
     MatButtonModule,
     MatCardModule,
@@ -37,6 +38,7 @@ import { CityValidatorDirective } from './validators/city-validator.directive';
     CityPipe,
     CityValidatorDirective,
     FormsModule,
+    ReactiveFormsModule,
     LayoutModule,
     MatButtonModule,
     MatCardModule,

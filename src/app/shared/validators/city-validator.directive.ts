@@ -28,7 +28,7 @@ export class CityValidatorDirective implements Validator {
           actualValue: c.value,
           validCities: validCities
         }
-      }
+      };
     }
 
     return null;

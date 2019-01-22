@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
 import { FlightSearchComponent } from './flight-booking/flight-search/flight-search.component';
+import { FlightEditComponent } from './flight-booking/flight-edit/flight-edit.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,10 @@ const routes: Routes = [
   {
     path: 'flight-search',
     component: FlightSearchComponent
+  },
+  {
+    path: 'flight-edit',
+    component: FlightEditComponent
   },
   {
     path: '**',
