@@ -29,7 +29,14 @@
     </button>
 
     <a
-      mat-mini-fab>
+      mat-mini-fab
+      [routerLink]="[
+        '/flight-booking/flight-edit',
+        item.id,
+        {
+          showDetails: true
+        }
+      ]">
       <mat-icon>edit</mat-icon>
     </a>
 

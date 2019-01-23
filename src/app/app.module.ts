@@ -18,10 +18,10 @@ import { FlightBookingModule } from './flight-booking/flight-booking.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
     FlightBookingModule,
+    AppRoutingModule,
     SharedModule
   ],
   providers: [],
